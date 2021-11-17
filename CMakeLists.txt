@@ -1,0 +1,11 @@
+set (CMAKE_CXX_STANDARD 11)
+cmake_minimum_required(VERSION 2.8)
+project(simulador2d)
+set(CMAKE_EXPORT_COMPILE_COMMANDS 1)
+find_package(OpenCV REQUIRED)
+find_package (Eigen3 REQUIRED NO_MODULE)
+include_directories(${EIGEN3_INCLUDE_DIRS})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR})
+add_subdirectory(src)
+#add_subdirectory(test)
